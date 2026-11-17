@@ -25,7 +25,7 @@
   --velo: rgba(255, 255, 255, 0.82);
 
   /* Tipografía */
-  --fuente-titulo: "Montecatini Pro", "Bodoni Moda", Didot, "Times New Roman", serif;
+  --fuente-titulo: "montecatini-pro-largo", "Montecatini Pro", "Bodoni Moda", Didot, serif;
   --fuente-texto: "Karmina Sans", Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --fuente-codigo: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
@@ -109,13 +109,28 @@ h1, h2, h3, h4 {
   font-family: var(--fuente-titulo);
   line-height: 1.08;
   margin: 0 0 var(--e-3);
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  /* Montecatini Pro dibuja las minúsculas como versalitas: los títulos van en caja alta */
+  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 h1 { font-size: var(--t-h1); }
 h2 { font-size: var(--t-h2); }
-h3 { font-size: var(--t-h3); line-height: 1.2; }
+h3 { font-size: var(--t-h3); line-height: 1.2; font-weight: 400; }
+
+/* Montecatini Pro activa ligaduras decorativas por defecto (CA, DO, GA…);
+   en los títulos se desactivan para que el texto se lea limpio. */
+h1, h2, h3, h4,
+.marca__texto strong,
+.pieza__texto strong,
+.pie__nombre,
+.portada__datos strong,
+.destacado,
+.tipo__muestra,
+.tipo__ejemplo--h1 {
+  font-feature-settings: "liga" 0, "dlig" 0, "calt" 0;
+}
 
 p { margin: 0 0 var(--e-3); }
 p:last-child { margin-bottom: 0; }
@@ -346,10 +361,8 @@ html[data-theme="dark"] .icono--luna { display: block; }
 }
 .etiqueta--clara { color: var(--turquesa); }
 
-.hero__nombre {
-  font-style: italic;
-  color: var(--tropical-cyan);
-}
+/* Montecatini Pro no tiene cursiva en el kit: el acento es solo de color */
+.hero__nombre { color: var(--tropical-cyan); }
 
 .hero__entrada {
   max-width: 46ch;
@@ -369,9 +382,8 @@ html[data-theme="dark"] .icono--luna { display: block; }
   margin: 0;
   padding: var(--e-3) 0 var(--e-3) var(--e-4);
   border-left: 3px solid var(--turquesa);
-  font-family: var(--fuente-titulo);
-  font-style: italic;
-  font-size: 1.22rem;
+  font-size: 1.06rem;
+  line-height: 1.55;
 }
 .cita p { margin: 0 0 var(--e-1); }
 .cita cite {
@@ -469,8 +481,8 @@ html[data-theme="dark"] .icono--luna { display: block; }
 
 .destacado {
   font-family: var(--fuente-titulo);
-  font-size: 1.35rem;
-  font-style: italic;
+  font-size: 1.2rem;
+  text-transform: uppercase;
   color: var(--texto) !important;
   padding-left: var(--e-4);
   border-left: 3px solid var(--turquesa);
@@ -623,7 +635,7 @@ html[data-theme="dark"] .filtro.esta-activo { background: var(--tropical-cyan); 
   transform: translateY(10px);
   transition: opacity var(--transicion), transform var(--transicion);
 }
-.pieza__texto strong { font-family: var(--fuente-titulo); font-size: 1.15rem; }
+.pieza__texto strong { font-family: var(--fuente-titulo); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.02em; }
 .pieza__texto small { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--turquesa); }
 .pieza:hover .pieza__texto,
 .pieza:focus-visible .pieza__texto { opacity: 1; transform: translateY(0); }
@@ -691,8 +703,8 @@ html[data-theme="dark"] .filtro.esta-activo { background: var(--tropical-cyan); 
 
 .pie { background: var(--abyss); color: var(--blanco); border-top: 1px solid rgba(255, 255, 255, 0.12); padding: var(--e-5) 0 var(--e-4); }
 .pie__interior { display: grid; grid-template-columns: 1fr auto; gap: var(--e-3); align-items: start; }
-.pie__nombre { font-family: var(--fuente-titulo); font-size: 1.15rem; margin-bottom: 2px; }
-.pie__frase { color: var(--turquesa); font-style: italic; font-size: 0.95rem; margin: 0; }
+.pie__nombre { font-family: var(--fuente-titulo); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 2px; }
+.pie__frase { color: var(--turquesa); font-size: 0.95rem; margin: 0; }
 .pie__enlaces { display: flex; gap: var(--e-3); flex-wrap: wrap; font-size: 0.9rem; }
 .pie__enlaces a { color: rgba(255, 255, 255, 0.78); text-decoration: none; }
 .pie__enlaces a:hover { color: var(--turquesa); }
@@ -805,7 +817,6 @@ html.js [data-revelar].visible { opacity: 1; transform: none; }
 html[data-theme="dark"] .portada::before { opacity: 0.3; }
 .portada__interior { position: relative; z-index: 1; max-width: 900px; }
 .portada h1 { font-size: clamp(3.2rem, 9vw, 6rem); line-height: 0.95; margin-bottom: var(--e-3); }
-.portada h1 em { color: var(--tropical-cyan); font-style: italic; }
 .portada__entrada { max-width: 58ch; color: var(--texto-suave); font-size: 1.1rem; }
 
 .portada__datos {
@@ -881,7 +892,7 @@ html[data-theme="dark"] .portada::before { opacity: 0.3; }
 .tipo__datos h3 { margin-bottom: var(--e-1); }
 .tipo__familia { font-family: var(--fuente-codigo); font-size: 0.78rem; letter-spacing: 0.04em; color: var(--sea-green); margin-bottom: var(--e-2); }
 .tipo__ejemplo { margin: 0; color: var(--texto-suave); }
-.tipo__ejemplo--h1 { font-family: var(--fuente-titulo); font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--texto); line-height: 1.1; }
+.tipo__ejemplo--h1 { font-family: var(--fuente-titulo); font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--texto); line-height: 1.1; text-transform: uppercase; }
 .tipo__ejemplo--sub { font-weight: 800; font-size: 1.1rem; color: var(--texto); }
 
 .aviso {
@@ -1016,7 +1027,7 @@ html[data-theme="dark"] .reglas__bloque--no { border-top-color: var(--texto-suav
 /* --------------------------------------------------------------------------
    13. Adaptación a pantallas
    -------------------------------------------------------------------------- */
-@media (max-width: 1080px) {
+@media (max-width: 900px) {
   .hero__interior { grid-template-columns: 1fr; gap: var(--e-5); }
   .hero__foto { max-width: 380px; }
   .hero { padding-top: calc(var(--cabecera-alto) + var(--e-5)); }

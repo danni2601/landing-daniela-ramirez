@@ -17,25 +17,25 @@ typography:
   h2:
     fontFamily: Montecatini Pro
     fontSize: 40px
-    fontWeight: 600
+    fontWeight: 700
     lineHeight: 1.15
   h3:
     fontFamily: Montecatini Pro
     fontSize: 28px
-    fontWeight: 600
+    fontWeight: 400
     lineHeight: 1.2
   subtitle:
-    fontFamily: Karmina Sans
+    fontFamily: Manrope
     fontSize: 20px
-    fontWeight: 900
+    fontWeight: 800
     lineHeight: 1.3
   body:
-    fontFamily: Karmina Sans
+    fontFamily: Manrope
     fontSize: 16px
     fontWeight: 400
     lineHeight: 1.6
   caption:
-    fontFamily: Karmina Sans
+    fontFamily: Manrope
     fontSize: 14px
     fontWeight: 400
     lineHeight: 1.4
@@ -105,8 +105,10 @@ Mi paleta está compuesta por 3 verdes azulados, 1 verde menta, azules oscuros y
 Se usan 2 familias tipográficas:
 
 - **Títulos:** *Montecatini Pro* y todas sus variantes. Para el título principal sería `66px`.
-- **Subtítulos:** *Karmina Sans* usando `Black`.
-- **Texto completo:** *Karmina Sans* usando `Regular`.
+- **Subtítulos:** *Manrope* usando `ExtraBold`.
+- **Texto completo:** *Manrope* usando `Regular`.
+
+Montecatini Pro se carga desde Adobe Fonts (kit propio) en sus cuatro anchos —Ampio, Largo, Normale y Stretto— con pesos 400 y 700. El sitio usa **Largo**. La familia no incluye cursivas y sus minúsculas están dibujadas como versalitas, así que los títulos se leen en mayúsculas. *Karmina Sans*, la familia original para el texto corrido, no viene en el kit: mientras se consigue, el texto se compone en *Manrope*, de proporciones y peso equivalentes.
 
 Las medidas de los niveles intermedios (subtítulos, texto y pies de página) son una propuesta de partida construida a partir del título de `66px`; pueden ajustarse sin alterar el resto del sistema.
 

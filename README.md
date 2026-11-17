@@ -50,12 +50,12 @@ npx @google/design.md lint DESIGN.md
 - Galería con filtros y visor de imagen.
 - Animaciones suaves que respetan la preferencia de movimiento reducido.
 - Navegación con teclado y etiquetas accesibles.
-- Imágenes en `assets/web/` reducidas para que el sitio cargue rápido.
+- Imágenes y videos en `img/` reducidos para que el sitio cargue rápido.
+- Tipografía **Montecatini Pro** en los títulos vía Adobe Fonts (kit de Typekit propio).
 
 ## Pendiente
 
-- Sustituir las tipografías sustitutas (Bodoni Moda y Manrope) por **Montecatini Pro** y **Karmina Sans**
-  cuando estén disponibles los archivos con licencia.
+- Conseguir **Karmina Sans** para el texto corrido; mientras tanto se usa Manrope como sustituta.
 
 ---
 
