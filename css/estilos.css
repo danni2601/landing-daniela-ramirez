@@ -798,7 +798,7 @@ html.js [data-revelar].visible { opacity: 1; transform: none; }
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../assets/web/fondo.jpg") center 30% / cover no-repeat;
+  background: url("../img/fondo.jpg") center 30% / cover no-repeat;
   opacity: 0.14;
   pointer-events: none;
 }
