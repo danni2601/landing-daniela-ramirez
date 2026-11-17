@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniela Ramírez Olmos — Tow Studios</title>
+<meta name="description" content="Portafolio de Daniela Ramírez Olmos (Tow Studios): diseño UX/UI, ilustración, branding y animación 3D.">
+<meta name="author" content="Daniela Ramírez Olmos">
+<meta property="og:title" content="Daniela Ramírez Olmos — Tow Studios">
+<meta property="og:description" content="Diseño UX/UI, ilustración, branding y animación 3D. Roma caerá, pero no caeremos con Roma.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/web/foto-perfil.jpg">
+<link rel="icon" href="assets/web/flor.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Manrope:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+<script>
+  // Aplica el tema antes de dibujar para evitar un destello de color.
+  (function () {
+    try {
+      document.documentElement.classList.add("js");
+      var guardado = localStorage.getItem("tow-tema");
+      if (!guardado) {
+        guardado = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", guardado);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="salto-contenido" href="#inicio">Saltar al contenido</a>
+
+<header class="cabecera" id="cabecera">
+  <div class="contenedor cabecera__interior">
+    <a class="marca" href="index.html" aria-label="Tow Studios Daniela Ramírez">
+      <img class="marca__logo marca__logo--claro" src="assets/web/logo-negro.png" alt="">
+      <img class="marca__logo marca__logo--oscuro" src="assets/web/logo-blanco.png" alt="">
+      <span class="marca__texto">
+        <strong>Tow Studios</strong>
+        <span>Daniela Ramírez</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <ul class="nav__lista">
+        <li><a class="nav__enlace" href="#inicio">Inicio</a></li>
+        <li><a class="nav__enlace" href="#sobre-mi">Sobre mí</a></li>
+        <li><a class="nav__enlace" href="#educacion">Educación</a></li>
+        <li><a class="nav__enlace" href="#experiencia">Experiencia</a></li>
+        <li><a class="nav__enlace" href="#trabajos">Trabajos</a></li>
+        <li><a class="nav__enlace" href="#habilidades">Habilidades</a></li>
+        <li><a class="nav__enlace" href="#contacto">Contacto</a></li>
+        <li><a class="nav__enlace nav__enlace--destacado" href="marca.html">La marca</a></li>
+      </ul>
+    </nav>
+
+    <div class="cabecera__acciones">
+      <button class="boton-icono" id="tema" type="button" aria-label="Cambiar a tema oscuro" aria-pressed="false">
+        <svg class="icono icono--sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.5 1.5M17.2 17.2l1.5 1.5M18.7 5.3l-1.5 1.5M6.8 17.2l-1.5 1.5"/></svg>
+        <svg class="icono icono--luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5a8.6 8.6 0 1 0 10.7 10.7z"/></svg>
+      </button>
+      <button class="boton-icono boton-icono--menu" id="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span class="hamburguesa" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-titulo">
+    <img class="adorno adorno--flor" src="assets/web/flor.png" alt="" aria-hidden="true">
+    <img class="adorno adorno--linea" src="assets/web/linea.png" alt="" aria-hidden="true">
+    <div class="contenedor hero__interior">
+      <div class="hero__foto" data-revelar>
+        <div class="hero__marco">
+          <img src="assets/web/foto-perfil.jpg" alt="Retrato de Daniela Ramírez Olmos" width="900" height="896">
+        </div>
+        <p class="hero__sello">TÖWI · CDMX</p>
+      </div>
+
+      <div class="hero__texto">
+        <p class="etiqueta" data-revelar>Diseño UX/UI · Ilustración · Branding</p>
+        <h1 id="hero-titulo" data-revelar>Hola, soy<br><span class="hero__nombre">Daniela</span><br>Ramírez Olmos</h1>
+        <p class="hero__entrada" data-revelar>
+          Diseñadora y creadora de <strong>Tow Studios</strong>, un estudio creativo especializado en
+          diseño UX/UI, ilustración y comunicación visual.
+        </p>
+        <p class="hero__entrada hero__entrada--suave" data-revelar>
+          Propuestas artísticas, funcionales y maximalistas, sin perder de vista las necesidades de cada cliente.
+        </p>
+        <div class="hero__acciones" data-revelar>
+          <a class="boton boton--primario" href="#trabajos">Ver mi trabajo</a>
+          <a class="boton boton--secundario" href="#contacto">Hablemos</a>
+        </div>
+        <blockquote class="cita" data-revelar>
+          <p>«Roma caerá, pero no caeremos con Roma».</p>
+          <cite>Evolucionar, adaptarnos y seguir creando sin perder nuestra esencia.</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="seccion" id="sobre-mi">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Sobre mí</p>
+        <h2>Artístico pero funcional</h2>
+      </header>
+
+      <div class="dos-columnas">
+        <div class="prosa" data-revelar>
+          <p>
+            Mi nombre es Daniela Ramírez Olmos, aunque también soy conocida como <strong>TÖWI</strong>.
+            Nací en la Ciudad de México en 2005 y actualmente resido en el Estado de México.
+          </p>
+          <p>
+            Desde pequeña he tenido un gran interés por la ilustración y las artes visuales. Estudio
+            Diseño Gráfico desde 2023, una carrera que me ha permitido desarrollar habilidades creativas
+            y explorar diferentes áreas del diseño.
+          </p>
+          <p>
+            Me apasiona la investigación detrás de cada proyecto, especialmente en el desarrollo de campañas
+            y experiencias UX/UI. Disfruto comprender las necesidades de los clientes, trabajar directamente
+            con ellos y transformar sus ideas en soluciones visuales y funcionales.
+          </p>
+          <p>
+            Me identifico con los estilos maximalistas y experimentales, aunque considero fundamental saber
+            adaptarme a la identidad y los objetivos de cada proyecto. Mi prioridad es mantener una
+            comunicación transparente, cercana y profesional.
+          </p>
+          <p>
+            He participado en concursos y proyectos de ilustración, incluyendo convocatorias relacionadas con
+            Veredictas, Panini y Japón. Actualmente busco ampliar mi experiencia profesional, explorar nuevas
+            oportunidades y seguir creciendo como diseñadora.
+          </p>
+        </div>
+
+        <aside class="tarjeta-ficha" data-revelar aria-label="Datos rápidos">
+          <h3>En breve</h3>
+          <dl class="ficha">
+            <div><dt>Nombre</dt><dd>Daniela Ramírez Olmos</dd></div>
+            <div><dt>Alias</dt><dd>TÖWI · Danny Ramírez</dd></div>
+            <div><dt>Origen</dt><dd>Ciudad de México, 2005</dd></div>
+            <div><dt>Residencia</dt><dd>Estado de México</dd></div>
+            <div><dt>Estudios</dt><dd>Diseño Gráfico Digital, Universidad La Salle México</dd></div>
+            <div><dt>Estudio</dt><dd>Tow Studios · independiente y freelance</dd></div>
+          </dl>
+          <a class="boton boton--primario boton--ancho" href="#contacto">Trabajemos juntas</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCACIÓN -->
+  <section class="seccion seccion--alterna" id="educacion">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Educación</p>
+        <h2>Formación y aprendizaje constante</h2>
+      </header>
+
+      <div class="rejilla rejilla--dos">
+        <article class="tarjeta" data-revelar>
+          <p class="tarjeta__meta">2023 — actualidad</p>
+          <h3>Licenciatura en Diseño Gráfico Digital</h3>
+          <p class="tarjeta__lugar">Universidad La Salle México</p>
+          <p>
+            Formación en comunicación visual y diseño digital, con participación en actividades de
+            servicio para la institución. Mi paso por la universidad me ha permitido desarrollar
+            conocimientos en distintas áreas del diseño, desde la comunicación visual hasta el
+            diseño digital.
+          </p>
+        </article>
+
+        <article class="tarjeta" data-revelar>
+          <p class="tarjeta__meta">Aprendizaje autónomo</p>
+          <h3>Autodidacta por convicción</h3>
+          <p class="tarjeta__lugar">Ilustración, pintura y expresión artística</p>
+          <p>
+            Disfruto aprender nuevas técnicas, estilos de ilustración, pintura y expresión artística,
+            manteniéndome en constante aprendizaje y experimentando con recursos que luego aplico
+            en cada proyecto.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="seccion" id="experiencia">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Experiencia profesional</p>
+        <h2>Cuatro formas de crear</h2>
+        <p class="seccion__intro">Mi experiencia se divide en distintas áreas creativas, lo que me permite
+          desarrollar proyectos desde diferentes perspectivas.</p>
+      </header>
+
+      <div class="rejilla rejilla--dos">
+        <article class="tarjeta-proyecto" data-revelar>
+          <div class="tarjeta-proyecto__imagen">
+            <img src="assets/web/fondo.jpg" alt="Fondo de página diseñado para un proyecto web" loading="lazy" width="1600" height="2263">
+          </div>
+          <div class="tarjeta-proyecto__cuerpo">
+            <h3>Diseño UX/UI</h3>
+            <p>
+              Diseño de interfaces y experiencias digitales para diferentes temáticas y organizaciones:
+              landing pages, investigaciones de usuario y propuestas para asociaciones relacionadas con
+              la conservación de los océanos.
+            </p>
+            <p class="tarjeta-proyecto__marcas">Cinemex · Cinépolis</p>
+          </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-revelar>
+          <div class="tarjeta-proyecto__imagen">
+            <img src="assets/web/ilustracion-playa.jpg" alt="Ilustración digital de una playa" loading="lazy" width="1400" height="1082">
+          </div>
+          <div class="tarjeta-proyecto__cuerpo">
+            <h3>Ilustración</h3>
+            <p>
+              Ilustraciones para diferentes formatos y aplicaciones: postales, imágenes promocionales y
+              recursos visuales. Mi trabajo se caracteriza por la experimentación con distintos estilos,
+              técnicas y recursos gráficos.
+            </p>
+            <p class="tarjeta-proyecto__marcas">Postales · Promocionales · Editorial</p>
+          </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-revelar>
+          <div class="tarjeta-proyecto__imagen">
+            <img src="assets/web/santa-clara-1.jpg" alt="Modelado 3D de un stand para Santa Clara" loading="lazy" width="1200" height="675">
+          </div>
+          <div class="tarjeta-proyecto__cuerpo">
+            <h3>Modelado y animación</h3>
+            <p>
+              Proyectos de modelado 3D y animación, entre ellos un stand para Santa Clara, el modelado de
+              uno de sus personajes representativos y el diseño de un kit de helados.
+            </p>
+            <p class="tarjeta-proyecto__marcas">Santa Clara · Downy</p>
+          </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-revelar>
+          <div class="tarjeta-proyecto__imagen">
+            <img src="assets/web/ricetta.png" alt="Identidad visual para la marca de salsas Ricetta" loading="lazy" width="900" height="1035">
+          </div>
+          <div class="tarjeta-proyecto__cuerpo">
+            <h3>Branding e identidad</h3>
+            <p>
+              Identidad visual, desarrollo de marca y campañas publicitarias para productos y
+              organizaciones: Ricetta, Nova waffles, OLÚA, el Festival Internacional de Santa Lucía y una
+              campaña sobre la obesidad infantil en México.
+            </p>
+            <p class="tarjeta-proyecto__marcas">Ricetta · Nova · OLÚA · Santa Lucía</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRABAJOS -->
+  <section class="seccion seccion--alterna" id="trabajos">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Selección de trabajos</p>
+        <h2>Galería</h2>
+        <p class="seccion__intro">Una mezcla de ilustración, branding, modelado 3D y campañas.</p>
+      </header>
+
+      <div class="filtros" role="group" aria-label="Filtrar trabajos" data-revelar>
+        <button class="filtro esta-activo" data-filtro="todos" type="button" aria-pressed="true">Todos</button>
+        <button class="filtro" data-filtro="ilustracion" type="button" aria-pressed="false">Ilustración</button>
+        <button class="filtro" data-filtro="branding" type="button" aria-pressed="false">Branding</button>
+        <button class="filtro" data-filtro="3d" type="button" aria-pressed="false">3D</button>
+        <button class="filtro" data-filtro="campana" type="button" aria-pressed="false">Campañas</button>
+      </div>
+
+      <div class="galeria" id="galeria">
+        <button class="pieza pieza--ancha" data-cat="ilustracion" type="button" data-revelar>
+          <img src="assets/web/ilustracion-montanas.jpg" alt="Ilustración digital de montañas" loading="lazy">
+          <span class="pieza__texto"><strong>Montañas</strong><small>Ilustración digital</small></span>
+        </button>
+
+        <button class="pieza" data-cat="ilustracion" type="button" data-revelar>
+          <img src="assets/web/ilustracion-agua.jpg" alt="Ilustración digital de agua" loading="lazy">
+          <span class="pieza__texto"><strong>Agua</strong><small>Ilustración digital</small></span>
+        </button>
+
+        <button class="pieza" data-cat="branding" type="button" data-revelar>
+          <img src="assets/web/ricetta.png" alt="Propuesta de identidad para Ricetta" loading="lazy">
+          <span class="pieza__texto"><strong>Ricetta</strong><small>Identidad de marca</small></span>
+        </button>
+
+        <button class="pieza" data-cat="3d" type="button" data-revelar>
+          <img src="assets/web/marina-2.jpg" alt="Portada «The Night» con corona modelada en 3D" loading="lazy">
+          <span class="pieza__texto"><strong>The Night</strong><small>Arte 3D y portada</small></span>
+        </button>
+
+        <button class="pieza" data-cat="campana" type="button" data-revelar>
+          <img src="assets/web/campana-festival.jpg" alt="Campaña para el Festival Internacional de Santa Lucía" loading="lazy">
+          <span class="pieza__texto"><strong>Festival de Santa Lucía</strong><small>Campaña</small></span>
+        </button>
+
+        <button class="pieza" data-cat="3d" type="button" data-revelar>
+          <img src="assets/web/santa-clara-2.jpg" alt="Modelado 3D de un stand de Santa Clara" loading="lazy">
+          <span class="pieza__texto"><strong>Santa Clara</strong><small>Modelado 3D</small></span>
+        </button>
+
+        <button class="pieza" data-cat="branding" type="button" data-revelar>
+          <img src="assets/web/waffless.jpg" alt="Propuesta de marca para Nova waffles" loading="lazy">
+          <span class="pieza__texto"><strong>Nova waffles</strong><small>Branding colaborativo</small></span>
+        </button>
+
+        <button class="pieza" data-cat="campana" type="button" data-revelar>
+          <img src="assets/web/campana-obesidad.jpg" alt="Campaña de concientización sobre la obesidad infantil" loading="lazy">
+          <span class="pieza__texto"><strong>Obesidad infantil</strong><small>Campaña de concientización</small></span>
+        </button>
+
+        <button class="pieza pieza--ancha" data-cat="ilustracion" type="button" data-revelar>
+          <img src="assets/web/comic.jpg" alt="Página de cómic ilustrada" loading="lazy">
+          <span class="pieza__texto"><strong>Cómic</strong><small>Narrativa ilustrada</small></span>
+        </button>
+
+        <button class="pieza" data-cat="3d" type="button" data-revelar>
+          <img src="assets/web/personaje-snt.jpg" alt="Personaje modelado en 3D" loading="lazy">
+          <span class="pieza__texto"><strong>Personaje SNT</strong><small>Modelado 3D</small></span>
+        </button>
+
+        <button class="pieza" data-cat="campana" type="button" data-revelar>
+          <img src="assets/web/campana-jugo.jpg" alt="Campaña publicitaria para una marca de jugos" loading="lazy">
+          <span class="pieza__texto"><strong>Campaña jugo</strong><small>Publicidad</small></span>
+        </button>
+
+        <button class="pieza" data-cat="ilustracion" type="button" data-revelar>
+          <img src="assets/web/macaw.png" alt="Ilustración de una guacamaya" loading="lazy">
+          <span class="pieza__texto"><strong>Guacamaya</strong><small>Ilustración</small></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="seccion" id="habilidades">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Habilidades</p>
+        <h2>Creatividad con método</h2>
+        <p class="seccion__intro">La combinación de creatividad, pensamiento estratégico y comunicación visual.</p>
+      </header>
+
+      <ul class="habilidades" data-revelar>
+        <li>Diseño UX/UI y desarrollo de interfaces</li>
+        <li>Investigación y experiencia de usuario</li>
+        <li>Diseño y maquetación digital</li>
+        <li>Ilustración y artes visuales</li>
+        <li>Branding e identidad corporativa</li>
+        <li>Desarrollo de campañas publicitarias</li>
+        <li>Modelado y animación 3D</li>
+        <li>Adaptación a diferentes estilos y marcas</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="seccion contacto" id="contacto">
+    <div class="contenedor contacto__interior">
+      <div data-revelar>
+        <p class="etiqueta etiqueta--clara">Contacto</p>
+        <h2>¿Tienes una idea?<br>Hagámosla realidad</h2>
+        <p class="contacto__texto">
+          Estoy abierta a nuevas oportunidades, colaboraciones y proyectos creativos.
+          Si tienes una idea o buscas desarrollar un proyecto, escríbeme.
+        </p>
+        <a class="boton boton--primario" href="mailto:daniela.ramirez2601@gmail.com">daniela.ramirez2601@gmail.com</a>
+      </div>
+
+      <ul class="contacto__lista" data-revelar>
+        <li>
+          <span class="contacto__etiqueta">Correo</span>
+          <a href="mailto:daniela.ramirez2601@gmail.com">daniela.ramirez2601@gmail.com</a>
+        </li>
+        <li>
+          <span class="contacto__etiqueta">Teléfono</span>
+          <a href="tel:+525635235001">56 3523 5001</a>
+        </li>
+        <li>
+          <span class="contacto__etiqueta">Instagram</span>
+          <a href="https://www.instagram.com/_towi_126" target="_blank" rel="noopener">@_towi_126</a>
+        </li>
+        <li>
+          <span class="contacto__etiqueta">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/danny-ramirez-99603b418/" target="_blank" rel="noopener">Danny Ramírez</a>
+        </li>
+        <li>
+          <span class="contacto__etiqueta">Veredictas</span>
+          <a href="https://www.veredictas.com/es/concursante/mi-portafolio.html" target="_blank" rel="noopener">Mi portafolio</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__interior">
+    <div>
+      <p class="pie__nombre">Danny Ramírez | TÖWI</p>
+      <p class="pie__frase">«Roma caerá, pero no caeremos con Roma».</p>
+    </div>
+    <div class="pie__enlaces">
+      <a href="marca.html">La marca y el sistema de diseño</a>
+      <a href="https://github.com/danni2601/landing-daniela-ramirez" target="_blank" rel="noopener">Ver en GitHub</a>
+    </div>
+    <p class="pie__legal">© <span id="anio">2026</span> Tow Studios · Hecho con cariño en el Estado de México.</p>
+  </div>
+</footer>
+
+<button class="arriba" id="arriba" type="button" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+  <button class="visor__cerrar" id="visor-cerrar" type="button" aria-label="Cerrar imagen">×</button>
+  <figure class="visor__figura">
+    <img id="visor-imagen" src="" alt="">
+    <figcaption id="visor-pie"></figcaption>
+  </figure>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

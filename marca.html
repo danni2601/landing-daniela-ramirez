@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La marca — Sistema de diseño de Tow Studios</title>
+<meta name="description" content="Sistema de diseño de Tow Studios: personalidad, colores, tipografía, espaciado, formas y componentes.">
+<link rel="icon" href="assets/web/flor.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Manrope:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+<script>
+  // Aplica el tema antes de dibujar para evitar un destello de color.
+  (function () {
+    try {
+      document.documentElement.classList.add("js");
+      var guardado = localStorage.getItem("tow-tema");
+      if (!guardado) {
+        guardado = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", guardado);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body class="pagina-marca">
+
+<a class="salto-contenido" href="#inicio-marca">Saltar al contenido</a>
+
+<header class="cabecera" id="cabecera">
+  <div class="contenedor cabecera__interior">
+    <a class="marca" href="index.html" aria-label="Sistema de diseño Tow Studios">
+      <img class="marca__logo marca__logo--claro" src="assets/web/logo-negro.png" alt="">
+      <img class="marca__logo marca__logo--oscuro" src="assets/web/logo-blanco.png" alt="">
+      <span class="marca__texto">
+        <strong>Sistema de diseño</strong>
+        <span>Tow Studios</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegación de la marca">
+      <ul class="nav__lista">
+        <li><a class="nav__enlace" href="#personalidad">Personalidad</a></li>
+        <li><a class="nav__enlace" href="#colores">Colores</a></li>
+        <li><a class="nav__enlace" href="#tipografia">Tipografía</a></li>
+        <li><a class="nav__enlace" href="#espaciado">Espaciado</a></li>
+        <li><a class="nav__enlace" href="#profundidad">Profundidad</a></li>
+        <li><a class="nav__enlace" href="#formas">Formas</a></li>
+        <li><a class="nav__enlace" href="#componentes">Componentes</a></li>
+        <li><a class="nav__enlace nav__enlace--destacado" href="index.html">Portafolio</a></li>
+      </ul>
+    </nav>
+
+    <div class="cabecera__acciones">
+      <button class="boton-icono" id="tema" type="button" aria-label="Cambiar a tema oscuro" aria-pressed="false">
+        <svg class="icono icono--sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.5 1.5M17.2 17.2l1.5 1.5M18.7 5.3l-1.5 1.5M6.8 17.2l-1.5 1.5"/></svg>
+        <svg class="icono icono--luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5a8.6 8.6 0 1 0 10.7 10.7z"/></svg>
+      </button>
+      <button class="boton-icono boton-icono--menu" id="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span class="hamburguesa" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="inicio-marca">
+
+  <section class="portada" aria-labelledby="portada-titulo">
+    <img class="adorno adorno--flor" src="assets/web/flor.png" alt="" aria-hidden="true">
+    <div class="contenedor portada__interior">
+      <p class="etiqueta" data-revelar>Sistema de diseño · versión alpha</p>
+      <h1 id="portada-titulo" data-revelar>Tow <em>Studios</em></h1>
+      <p class="portada__entrada" data-revelar>
+        La identidad visual de mi marca: maximalista, orgánica y funcional. Este documento reúne los
+        colores, la tipografía, el espaciado y los componentes que dan forma a cada proyecto.
+      </p>
+      <ul class="portada__datos" data-revelar>
+        <li><strong>5</strong><span>colores base</span></li>
+        <li><strong>6</strong><span>niveles tipográficos</span></li>
+        <li><strong>6</strong><span>medidas de espaciado</span></li>
+        <li><strong>5</strong><span>componentes</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PERSONALIDAD -->
+  <section class="seccion" id="personalidad">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Personalidad</p>
+        <h2>Artístico pero funcional</h2>
+      </header>
+      <div class="dos-columnas dos-columnas--ancha">
+        <div class="prosa" data-revelar>
+          <p>
+            Mi marca es una estética un tanto maximalista, orgánica y centrada en ser funcional: una
+            agradable experiencia artística. Se apoya de verdes azulados, azules oscuros y un blanco que da
+            la certeza de transparencia, creatividad y pasión por la ilustración.
+          </p>
+          <p>
+            Priorizo la funcionalidad y las figuras orgánicas, una composición admirable y una tipografía
+            que represente a la marca. Está pensada para diseñadores a quienes les interese la
+            experimentación, respetando siempre el trato al usuario.
+          </p>
+          <p class="destacado">
+            Es artístico pero funcional, tiene un buen contraste y no se olvida de la experiencia de usuario.
+          </p>
+        </div>
+        <aside class="tarjeta-ficha tarjeta-ficha--clara" data-revelar>
+          <h3>Tres principios</h3>
+          <ol class="lista-numero">
+            <li><strong>Contraste</strong> para que todo se lea sin esfuerzo.</li>
+            <li><strong>Orden</strong> incluso en la composición más libre.</li>
+            <li><strong>Calidez</strong> en el trato y en la comunicación.</li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLORES -->
+  <section class="seccion seccion--alterna" id="colores">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Colores</p>
+        <h2>Verdes azulados y azul profundo</h2>
+        <p class="seccion__intro">
+          Tres verdes azulados, un verde menta y una base blanca contrastante. Toca cualquier muestra
+          para copiar su código de color.
+        </p>
+      </header>
+
+      <div class="paleta">
+        <article class="muestra" style="--muestra:#00BFC1" data-revelar>
+          <span class="muestra__color"></span>
+          <div class="muestra__info">
+            <h3>Tropical Cyan</h3>
+            <p>Títulos. El color que abre cada sección.</p>
+            <button class="muestra__codigo" type="button" data-copiar="#00BFC1">#00BFC1</button>
+          </div>
+        </article>
+
+        <article class="muestra" style="--muestra:#1A9EA0" data-revelar>
+          <span class="muestra__color"></span>
+          <div class="muestra__info">
+            <h3>Sea Green</h3>
+            <p>Ornamentos y elementos decorativos.</p>
+            <button class="muestra__codigo" type="button" data-copiar="#1A9EA0">#1A9EA0</button>
+          </div>
+        </article>
+
+        <article class="muestra" style="--muestra:#40E0D0" data-revelar>
+          <span class="muestra__color"></span>
+          <div class="muestra__info">
+            <h3>Turquesa</h3>
+            <p>Acentos e iconos seleccionados.</p>
+            <button class="muestra__codigo" type="button" data-copiar="#40E0D0">#40E0D0</button>
+          </div>
+        </article>
+
+        <article class="muestra" style="--muestra:#04121C" data-revelar>
+          <span class="muestra__color"></span>
+          <div class="muestra__info">
+            <h3>Abyss</h3>
+            <p>Cuerpo de texto y fondos profundos.</p>
+            <button class="muestra__codigo" type="button" data-copiar="#04121C">#04121C</button>
+          </div>
+        </article>
+
+        <article class="muestra" style="--muestra:#FFFFFF" data-revelar>
+          <span class="muestra__color"></span>
+          <div class="muestra__info">
+            <h3>Blanco base</h3>
+            <p>Transparencia y contraste con todo.</p>
+            <button class="muestra__codigo" type="button" data-copiar="#FFFFFF">#FFFFFF</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPOGRAFÍA -->
+  <section class="seccion" id="tipografia">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Tipografía</p>
+        <h2>Montecatini Pro y Karmina Sans</h2>
+        <p class="seccion__intro">
+          Dos familias: una para los títulos y otra para subtítulos y texto completo.
+        </p>
+      </header>
+
+      <div class="tipos">
+        <article class="tipo" data-revelar>
+          <div class="tipo__escala">
+            <p class="tipo__muestra tipo__muestra--h1">Aa</p>
+          </div>
+          <div class="tipo__datos">
+            <h3>Título principal</h3>
+            <p class="tipo__familia">Montecatini Pro · 66px · 700</p>
+            <p class="tipo__ejemplo tipo__ejemplo--h1">Diseño con carácter</p>
+          </div>
+        </article>
+
+        <article class="tipo" data-revelar>
+          <div class="tipo__escala">
+            <p class="tipo__muestra">Aa</p>
+          </div>
+          <div class="tipo__datos">
+            <h3>Subtítulo</h3>
+            <p class="tipo__familia">Karmina Sans · 20px · Black</p>
+            <p class="tipo__ejemplo tipo__ejemplo--sub">Comunicación clara y cercana</p>
+          </div>
+        </article>
+
+        <article class="tipo" data-revelar>
+          <div class="tipo__escala">
+            <p class="tipo__muestra tipo__muestra--texto">Aa</p>
+          </div>
+          <div class="tipo__datos">
+            <h3>Texto completo</h3>
+            <p class="tipo__familia">Karmina Sans · 16px · Regular</p>
+            <p class="tipo__ejemplo">
+              Cada proyecto parte de una investigación: entender a las personas, sus necesidades y el
+              contexto de la marca antes de dibujar la primera línea.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="aviso" data-revelar>
+        <strong>Nota de producción.</strong>
+        Montecatini Pro y Karmina Sans son tipografías con licencia y no estaban instaladas en el equipo,
+        así que el sitio usa Bodoni Moda y Manrope como sustitutas cercanas. Si me compartes los archivos
+        de las fuentes originales, las cambio en un minuto y la identidad queda idéntica.
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPACIADO -->
+  <section class="seccion seccion--alterna" id="espaciado">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Layout y espaciado</p>
+        <h2>Una retícula que respira</h2>
+        <p class="seccion__intro">
+          El layout combina orden y experimentación. El espaciado parte de una base de 4px y crece en
+          múltiplos.
+        </p>
+      </header>
+
+      <ul class="escala" data-revelar>
+        <li><span class="escala__barra" style="--w:4px"></span><code>xs</code><em>4px</em></li>
+        <li><span class="escala__barra" style="--w:8px"></span><code>sm</code><em>8px</em></li>
+        <li><span class="escala__barra" style="--w:16px"></span><code>md</code><em>16px</em></li>
+        <li><span class="escala__barra" style="--w:24px"></span><code>lg</code><em>24px</em></li>
+        <li><span class="escala__barra" style="--w:40px"></span><code>xl</code><em>40px</em></li>
+        <li><span class="escala__barra" style="--w:64px"></span><code>2xl</code><em>64px</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROFUNDIDAD -->
+  <section class="seccion" id="profundidad">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Profundidad</p>
+        <h2>Jerarquía sin ruido</h2>
+        <p class="seccion__intro">
+          La profundidad distingue lo interactivo de lo decorativo con superposición, contraste y sombras
+          suaves, nunca con sombras fuertes en todos los elementos.
+        </p>
+      </header>
+
+      <div class="elevaciones">
+        <article class="elevacion elevacion--1" data-revelar><h3>Nivel 1</h3><p>Tarjetas y contenedores base.</p></article>
+        <article class="elevacion elevacion--2" data-revelar><h3>Nivel 2</h3><p>Elementos que se levantan al pasar el cursor.</p></article>
+        <article class="elevacion elevacion--3" data-revelar><h3>Nivel 3</h3><p>Ventanas y contenido que se superpone.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAS -->
+  <section class="seccion seccion--alterna" id="formas">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Formas</p>
+        <h2>Orgánico con estructura</h2>
+        <p class="seccion__intro">
+          Curvas y asimetrías que conviven con una retícula clara. Los botones usan bordes redondeados.
+        </p>
+      </header>
+
+      <div class="formas" data-revelar>
+        <div class="forma forma--organica"><span></span><p>Orgánica</p></div>
+        <div class="forma forma--redondeada"><span></span><p>Redondeada 24px</p></div>
+        <div class="forma forma--pildora"><span></span><p>Píldora</p></div>
+        <div class="forma forma--geometrica"><span></span><p>Geométrica</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPONENTES -->
+  <section class="seccion" id="componentes">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Componentes</p>
+        <h2>Botones y tarjetas</h2>
+        <p class="seccion__intro">
+          Colores contrastantes, bordes redondeados y texto legible. La acción principal siempre se
+          distingue de la secundaria.
+        </p>
+      </header>
+
+      <div class="componentes">
+        <article class="demo" data-revelar>
+          <h3>Botones</h3>
+          <div class="demo__fila">
+            <button class="boton boton--primario" type="button">Acción principal</button>
+            <button class="boton boton--secundario" type="button">Acción secundaria</button>
+          </div>
+          <p class="demo__nota">El botón principal usa Tropical Cyan; el secundario, blanco con borde visible.</p>
+        </article>
+
+        <article class="demo" data-revelar>
+          <h3>Etiquetas</h3>
+          <div class="demo__fila">
+            <span class="chip">UX/UI</span>
+            <span class="chip">Ilustración</span>
+            <span class="chip">Branding</span>
+            <span class="chip chip--acento">3D</span>
+          </div>
+          <p class="demo__nota">Sirven para categorías y habilidades, con contraste suficiente para leerse.</p>
+        </article>
+
+        <article class="demo demo--ancho" data-revelar>
+          <h3>Tarjeta de proyecto</h3>
+          <div class="tarjeta-proyecto tarjeta-proyecto--demo">
+            <div class="tarjeta-proyecto__imagen">
+              <img src="assets/web/ilustracion-agua.jpg" alt="Ejemplo de tarjeta de proyecto" loading="lazy">
+            </div>
+            <div class="tarjeta-proyecto__cuerpo">
+              <h3>Nombre del proyecto</h3>
+              <p>Una descripción breve explica el reto, lo que se hizo y el resultado.</p>
+              <p class="tarjeta-proyecto__marcas">Categoría · Año</p>
+            </div>
+          </div>
+          <p class="demo__nota">Imagen arriba, texto abajo: la misma estructura en todo el portafolio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGLAS -->
+  <section class="seccion seccion--alterna" id="reglas">
+    <div class="contenedor">
+      <header class="seccion__cabecera" data-revelar>
+        <p class="etiqueta">Reglas de uso</p>
+        <h2>Sí y no</h2>
+      </header>
+
+      <div class="reglas">
+        <article class="reglas__bloque reglas__bloque--si" data-revelar>
+          <h3>Sí</h3>
+          <ul>
+            <li>Usar colores con contraste suficiente para facilitar la lectura.</li>
+            <li>Mantener una jerarquía tipográfica clara.</li>
+            <li>Combinar formas orgánicas con estructuras ordenadas.</li>
+            <li>Utilizar componentes consistentes y accesibles.</li>
+            <li>Reservar los colores brillantes para destacar acciones y elementos clave.</li>
+          </ul>
+        </article>
+
+        <article class="reglas__bloque reglas__bloque--no" data-revelar>
+          <h3>No</h3>
+          <ul>
+            <li>Saturar las pantallas con ornamentación innecesaria.</li>
+            <li>Usar turquesa brillante para párrafos extensos.</li>
+            <li>Mezclar estilos de iconos o demasiadas tipografías.</li>
+            <li>Aplicar sombras fuertes a todos los elementos.</li>
+            <li>Sacrificar la navegación o la legibilidad por la estética.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="descarga" data-revelar>
+        <div>
+          <h3>Documento oficial</h3>
+          <p>El sistema completo vive en el archivo DESIGN.md del repositorio, listo para validarse o exportarse.</p>
+        </div>
+        <a class="boton boton--primario" href="https://github.com/danni2601/landing-daniela-ramirez/blob/main/DESIGN.md" target="_blank" rel="noopener">Ver DESIGN.md</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__interior">
+    <div>
+      <p class="pie__nombre">Danny Ramírez | TÖWI</p>
+      <p class="pie__frase">«Roma caerá, pero no caeremos con Roma».</p>
+    </div>
+    <div class="pie__enlaces">
+      <a href="index.html">Volver al portafolio</a>
+      <a href="https://github.com/danni2601/landing-daniela-ramirez" target="_blank" rel="noopener">Ver en GitHub</a>
+    </div>
+    <p class="pie__legal">© <span id="anio">2026</span> Tow Studios · Sistema de diseño versión alpha.</p>
+  </div>
+</footer>
+
+<button class="arriba" id="arriba" type="button" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<div class="aviso-copiado" id="aviso-copiado" role="status" aria-live="polite"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
