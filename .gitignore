@@ -1,0 +1,14 @@
+# Archivos del sistema (macOS)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Archivos temporales de Office/Word
+~$*
+*.tmp
+
+# Dependencias y entornos
+node_modules/
+.env
+.env.local
