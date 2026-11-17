@@ -1,7 +1,7 @@
 ---
 version: alpha
-name: Tow Studios — Sistema de diseño
-description: "Sistema de diseño de Daniela Ramírez Olmos (Tow Studios): maximalista, orgánico y funcional, construido sobre verdes azulados, azules profundos y una base blanca."
+name: TÖWI Studios — Sistema de diseño
+description: "Sistema de diseño de Daniela Ramírez Olmos (TÖWI Studios): maximalista, orgánico y funcional, construido sobre verdes azulados, azules profundos y una base blanca."
 colors:
   primary: "#00BFC1"
   secondary: "#1A9EA0"
@@ -76,7 +76,7 @@ components:
 
 # MI SISTEMA DE DISEÑO
 
-**Daniela Ramírez Olmos** — Tow Studios
+**Daniela Ramírez Olmos** — TÖWI Studios
 
 ## Overview
 

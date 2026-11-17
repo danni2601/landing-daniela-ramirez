@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Tow Studios — Hoja de estilos principal
+   TÖWI Studios — Hoja de estilos principal
    Basada en el sistema de diseño de Daniela Ramírez Olmos (DESIGN.md)
    ========================================================================== */
 
@@ -1026,7 +1026,7 @@ html[data-theme="dark"] .reglas__bloque--no { border-top-color: var(--texto-suav
   .tipo { grid-template-columns: 130px 1fr; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .cabecera__acciones { gap: var(--e-1); }
   .boton-icono--menu { display: grid; }
 
@@ -1081,3 +1081,120 @@ html[data-theme="dark"] .reglas__bloque--no { border-top-color: var(--texto-suav
   .portada__datos strong { font-size: 1.7rem; }
   .pie__enlaces { gap: var(--e-2); }
 }
+
+/* --------------------------------------------------------------------------
+   14. Fondo del portafolio, videos y detalles de marca
+   -------------------------------------------------------------------------- */
+
+/* Fondo de página diseñado por Daniela (arte original) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/fondo.jpg") center 30% / cover no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+html[data-theme="dark"] .hero::before { opacity: 0.18; }
+
+/* Cinta y flor como ornamentos */
+.adorno--linea {
+  width: 300px;
+  bottom: -70px;
+  left: -70px;
+  transform: rotate(-14deg);
+  opacity: 0.3;
+}
+.adorno--cinta {
+  width: 300px;
+  right: -60px;
+  top: 12%;
+  transform: rotate(150deg);
+  opacity: 0.35;
+}
+.seccion { position: relative; }
+.seccion .contenedor { position: relative; }
+.adorno--flor-seccion {
+  width: 130px;
+  top: -18px;
+  right: 6px;
+  transform: rotate(-12deg);
+  opacity: 0.4;
+}
+.contacto { position: relative; overflow: hidden; }
+.adorno--cinta-clara {
+  width: 300px;
+  top: -60px;
+  right: -50px;
+  transform: rotate(140deg);
+  opacity: 0.22;
+}
+
+/* Logo en el pie */
+.pie__logo {
+  width: 128px;
+  height: auto;
+  margin-bottom: var(--e-2);
+}
+
+/* Videos de proyectos */
+.videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--e-3);
+  margin-top: var(--e-4);
+}
+.video-tarjeta {
+  display: flex;
+  flex-direction: column;
+  background: var(--fondo-tarjeta);
+  border: 1px solid var(--linea);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.video-tarjeta__media { background: #000; aspect-ratio: 4 / 5; }
+.video-tarjeta__media video { width: 100%; height: 100%; object-fit: contain; display: block; }
+.video-tarjeta__texto { padding: var(--e-4); display: flex; flex-direction: column; gap: var(--e-2); flex: 1; }
+.video-tarjeta__texto h3 { margin: 0; }
+.video-tarjeta__texto p { color: var(--texto-suave); margin: 0; }
+.video-tarjeta__texto .tarjeta-proyecto__marcas { margin-top: auto; padding-top: var(--e-2); }
+
+/* Portada de la marca con logotipo */
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.portada__logo { width: min(540px, 80%); height: auto; display: block; margin-bottom: var(--e-4); }
+.portada__logo--oscuro { display: none; }
+html[data-theme="dark"] .portada__logo--claro { display: none; }
+html[data-theme="dark"] .portada__logo--oscuro { display: block; }
+
+@media (max-width: 1080px) {
+  .adorno--flor-seccion { width: 90px; top: -10px; }
+}
+
+@media (max-width: 760px) {
+  .videos { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .adorno--linea, .adorno--cinta, .adorno--cinta-clara { width: 200px; opacity: 0.2; }
+  .portada__logo { width: 88%; }
+}
+
+/* Imágenes con fondo transparente: se muestran completas sobre fondo claro */
+.tarjeta-proyecto__imagen--clara,
+.pieza--clara { background: var(--fondo-suave); }
+.tarjeta-proyecto__imagen--clara img { object-fit: contain; padding: var(--e-4); }
+.pieza--clara img { object-fit: contain; padding: var(--e-5); }
+.pieza--clara:hover img { transform: scale(1.03); }
+
+.videos { justify-items: center; }
+.video-tarjeta { width: 100%; max-width: 440px; }

@@ -70,7 +70,7 @@
     });
 
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 900) cerrarMenu();
+      if (window.innerWidth > 1080) cerrarMenu();
     });
   }
 
@@ -126,6 +126,7 @@
 
   if (anclas.length && "IntersectionObserver" in window) {
     var vigia = new IntersectionObserver(function (entradas) {
+      if ((window.scrollY || window.pageYOffset) < 150) return;
       entradas.forEach(function (entrada) {
         if (!entrada.isIntersecting) return;
         var id = "#" + entrada.target.id;

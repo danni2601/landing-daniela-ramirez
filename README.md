@@ -1,6 +1,6 @@
-# Landing de Daniela Ramírez — Tow Studios
+# Landing de Daniela Ramírez — TÖWI Studios
 
-Sitio de portafolio y manual de marca de **Daniela Ramírez Olmos (Tow Studios)**, hecho con HTML,
+Sitio de portafolio y manual de marca de **Daniela Ramírez Olmos (TÖWI Studios)**, hecho con HTML,
 CSS y JavaScript sin dependencias ni frameworks.
 
 - **Portafolio:** presentación, sobre mí, educación, experiencia, galería de trabajos, habilidades y contacto.
@@ -20,8 +20,8 @@ index.html            Portafolio (una sola página con secciones)
 marca.html            Sistema de diseño / manual de marca
 css/estilos.css       Estilos, tokens de color, temas claro y oscuro, diseño adaptable
 js/app.js             Tema, menú móvil, filtros, galería, copiar colores y animaciones
-assets/web/           Imágenes optimizadas para la web
-Assets/               Material original (ilustraciones, renders y videos)
+img/                  Imágenes y videos optimizados para la web
+Assets/               Material original (ilustraciones, renders y videos sin comprimir)
 DESIGN.md             Sistema de diseño en el formato oficial, validado con @google/design.md
 ```
 
@@ -59,4 +59,4 @@ npx @google/design.md lint DESIGN.md
 
 ---
 
-© Tow Studios · Daniela Ramírez Olmos
+© TÖWI Studios · Daniela Ramírez Olmos
